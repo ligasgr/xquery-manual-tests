@@ -1,0 +1,1519 @@
+<functions>
+    <function>
+        <prefix>fn</prefix>
+        <name>QName</name>
+        <arity>2</arity>
+        <arguments>$paramURI as xs:string?, $paramQName as xs:string</arguments>
+        <returnType>xs:QName</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>abs</name>
+        <arity>1</arity>
+        <arguments>$arg as numeric?</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-date-to-timezone</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:date?</arguments>
+        <returnType>xs:date?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-date-to-timezone</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:date?, $timezone as xs:dayTimeDuration?</arguments>
+        <returnType>xs:date?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-dateTime-to-timezone</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:dateTime?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-dateTime-to-timezone</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:dateTime?, $timezone as xs:dayTimeDuration?</arguments>
+        <returnType>xs:dateTime?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-time-to-timezone</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:time?</arguments>
+        <returnType>xs:time?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>adjust-time-to-timezone</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:time?, $timezone as xs:dayTimeDuration?</arguments>
+        <returnType>xs:time?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>analyze-string</name>
+        <arity>2</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string</arguments>
+        <returnType>element(fn:analyze-string-result)</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>analyze-string</name>
+        <arity>3</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string, $flags as xs:string</arguments>
+        <returnType>element(fn:analyze-string-result)</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>available-environment-variables</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>avg</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType*</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>base-uri</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>base-uri</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>boolean</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>ceiling</name>
+        <arity>1</arity>
+        <arguments>$arg as numeric?</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>codepoint-equal</name>
+        <arity>2</arity>
+        <arguments>$comparand1 as xs:string?, $comparand2 as xs:string?</arguments>
+        <returnType>xs:boolean?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>codepoints-to-string</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:integer*</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>collection</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>collection</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>compare</name>
+        <arity>2</arity>
+        <arguments>$comparand1 as xs:string?, $comparand2 as xs:string?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>compare</name>
+        <arity>3</arity>
+        <arguments>$comparand1 as xs:string?, $comparand2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>concat</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:anyAtomicType?, $arg2 as xs:anyAtomicType?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>contains</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>contains</name>
+        <arity>3</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>count</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>current-date</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:date</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>current-dateTime</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:dateTimeStamp</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>current-time</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:time</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>data</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyAtomicType*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>data</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:anyAtomicType*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>dateTime</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:date?, $arg2 as xs:time?</arguments>
+        <returnType>xs:dateTime?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>day-from-date</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:date?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>day-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>days-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>deep-equal</name>
+        <arity>2</arity>
+        <arguments>$parameter1 as item()*, $parameter2 as item()*</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>deep-equal</name>
+        <arity>3</arity>
+        <arguments>$parameter1 as item()*, $parameter2 as item()*, $collation as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>default-collation</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>distinct-values</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType*</arguments>
+        <returnType>xs:anyAtomicType*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>distinct-values</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:anyAtomicType*, $collation as xs:string</arguments>
+        <returnType>xs:anyAtomicType*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>doc</name>
+        <arity>1</arity>
+        <arguments>$uri as xs:string?</arguments>
+        <returnType>document-node()?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>doc-available</name>
+        <arity>1</arity>
+        <arguments>$uri as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>document-uri</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>document-uri</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>element-with-id</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string*</arguments>
+        <returnType>element()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>element-with-id</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:string*, $node as node()</arguments>
+        <returnType>element()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>empty</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>encode-for-uri</name>
+        <arity>1</arity>
+        <arguments>$uri-part as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>ends-with</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>ends-with</name>
+        <arity>3</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>environment-variable</name>
+        <arity>1</arity>
+        <arguments>$name as xs:string</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>error</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>none</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>error</name>
+        <arity>1</arity>
+        <arguments>$code as xs:QName</arguments>
+        <returnType>none</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>error</name>
+        <arity>2</arity>
+        <arguments>$code as xs:QName?, $description as xs:string</arguments>
+        <returnType>none</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>error</name>
+        <arity>3</arity>
+        <arguments>$code as xs:QName?, $description as xs:string, $error-object as item()*</arguments>
+        <returnType>none</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>escape-html-uri</name>
+        <arity>1</arity>
+        <arguments>$uri as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>exactly-one</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>exists</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>false</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>filter</name>
+        <arity>2</arity>
+        <arguments>$seq as item()*, $f as function(item()) as
+            xs:boolean</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>floor</name>
+        <arity>1</arity>
+        <arguments>$arg as numeric?</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>fold-left</name>
+        <arity>3</arity>
+        <arguments>$seq as item()*, $zero as item()*, $f as function(item()*,
+            item()) as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>fold-right</name>
+        <arity>3</arity>
+        <arguments>$seq as item()*, $zero as item()*, $f as function(item()*,
+            item()) as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>for-each</name>
+        <arity>2</arity>
+        <arguments>$seq as item()*, $f as function(item()) as
+            item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>for-each-pair</name>
+        <arity>3</arity>
+        <arguments>$seq1 as item()*, $seq2 as item()*, $f as function(item(),
+            item()) as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-date</name>
+        <arity>2</arity>
+        <arguments>$value as xs:date?, $picture as xs:string</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-date</name>
+        <arity>5</arity>
+        <arguments>$value as xs:date?, $picture as xs:string, $language as xs:string?, $calendar as xs:string?, $place as xs:string?</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-dateTime</name>
+        <arity>2</arity>
+        <arguments>$value as xs:dateTime?, $picture as xs:string</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-dateTime</name>
+        <arity>5</arity>
+        <arguments>$value as xs:dateTime?, $picture as xs:string, $language as xs:string?, $calendar as xs:string?, $place as xs:string?</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-integer</name>
+        <arity>2</arity>
+        <arguments>$value as xs:integer?, $picture as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-integer</name>
+        <arity>3</arity>
+        <arguments>$value as xs:integer?, $picture as xs:string, $lang as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-number</name>
+        <arity>2</arity>
+        <arguments>$value as numeric?, $picture as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-number</name>
+        <arity>3</arity>
+        <arguments>$value as numeric?, $picture as xs:string, $decimal-format-name as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-time</name>
+        <arity>2</arity>
+        <arguments>$value as xs:time?, $picture as xs:string</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>format-time</name>
+        <arity>5</arity>
+        <arguments>$value as xs:time?, $picture as xs:string, $language as xs:string?, $calendar as xs:string?, $place as xs:string?</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>function-arity</name>
+        <arity>1</arity>
+        <arguments>$func as function(*)</arguments>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>function-lookup</name>
+        <arity>2</arity>
+        <arguments>$name as xs:QName, $arity as xs:integer</arguments>
+        <returnType>function(*)?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>function-name</name>
+        <arity>1</arity>
+        <arguments>$func as function(*)</arguments>
+        <returnType>xs:QName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>generate-id</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>generate-id</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>has-children</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>has-children</name>
+        <arity>1</arity>
+        <arguments>$node as node()?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>head</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>hours-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>hours-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>hours-from-time</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:time?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>id</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string*</arguments>
+        <returnType>element()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>id</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:string*, $node as node()</arguments>
+        <returnType>element()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>idref</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string*</arguments>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>idref</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:string*, $node as node()</arguments>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>implicit-timezone</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:dayTimeDuration</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>in-scope-prefixes</name>
+        <arity>1</arity>
+        <arguments>$element as element()</arguments>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>index-of</name>
+        <arity>2</arity>
+        <arguments>$seq as xs:anyAtomicType*, $search as xs:anyAtomicType</arguments>
+        <returnType>xs:integer*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>index-of</name>
+        <arity>3</arity>
+        <arguments>$seq as xs:anyAtomicType*, $search as xs:anyAtomicType, $collation as xs:string</arguments>
+        <returnType>xs:integer*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>innermost</name>
+        <arity>1</arity>
+        <arguments>$nodes as node()*</arguments>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>insert-before</name>
+        <arity>3</arity>
+        <arguments>$target as item()*, $position as xs:integer, $inserts as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>iri-to-uri</name>
+        <arity>1</arity>
+        <arguments>$iri as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>lang</name>
+        <arity>1</arity>
+        <arguments>$testlang as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>lang</name>
+        <arity>2</arity>
+        <arguments>$testlang as xs:string?, $node as node()</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>last</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>local-name</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>local-name</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>local-name-from-QName</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:QName?</arguments>
+        <returnType>xs:NCName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>lower-case</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>matches</name>
+        <arity>2</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>matches</name>
+        <arity>3</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string, $flags as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>max</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType*</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>max</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:anyAtomicType*, $collation as xs:string</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>min</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType*</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>min</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:anyAtomicType*, $collation as xs:string</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>minutes-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>minutes-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>minutes-from-time</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:time?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>month-from-date</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:date?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>month-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>months-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>name</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>name</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>namespace-uri</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyURI</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>namespace-uri</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:anyURI</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>namespace-uri-for-prefix</name>
+        <arity>2</arity>
+        <arguments>$prefix as xs:string?, $element as element()</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>namespace-uri-from-QName</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:QName?</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>nilled</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>nilled</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:boolean?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>node-name</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:QName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>node-name</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:QName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>normalize-space</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>normalize-space</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>normalize-unicode</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>normalize-unicode</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:string?, $normalizationForm as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>not</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>number</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:double</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>number</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType?</arguments>
+        <returnType>xs:double</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>one-or-more</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()+</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>outermost</name>
+        <arity>1</arity>
+        <arguments>$nodes as node()*</arguments>
+        <returnType>node()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>parse-xml</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>document-node(element(*))?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>parse-xml-fragment</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>document-node()?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>path</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>path</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>position</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>prefix-from-QName</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:QName?</arguments>
+        <returnType>xs:NCName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>remove</name>
+        <arity>2</arity>
+        <arguments>$target as item()*, $position as xs:integer</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>replace</name>
+        <arity>3</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string, $replacement as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>replace</name>
+        <arity>4</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string, $replacement as xs:string, $flags as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>resolve-QName</name>
+        <arity>2</arity>
+        <arguments>$qname as xs:string?, $element as element()</arguments>
+        <returnType>xs:QName?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>resolve-uri</name>
+        <arity>1</arity>
+        <arguments>$relative as xs:string?</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>resolve-uri</name>
+        <arity>2</arity>
+        <arguments>$relative as xs:string?, $base as xs:string</arguments>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>reverse</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>root</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>node()</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>root</name>
+        <arity>1</arity>
+        <arguments>$arg as node()?</arguments>
+        <returnType>node()?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>round</name>
+        <arity>1</arity>
+        <arguments>$arg as numeric?</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>round</name>
+        <arity>2</arity>
+        <arguments>$arg as numeric?, $precision as xs:integer</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>round-half-to-even</name>
+        <arity>1</arity>
+        <arguments>$arg as numeric?</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>round-half-to-even</name>
+        <arity>2</arity>
+        <arguments>$arg as numeric?, $precision as xs:integer</arguments>
+        <returnType>numeric?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>seconds-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:decimal?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>seconds-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:decimal?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>seconds-from-time</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:time?</arguments>
+        <returnType>xs:decimal?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>serialize</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>serialize</name>
+        <arity>2</arity>
+        <arguments>$arg as item()*, $params as element(output:serialization-parameters)?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>starts-with</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>starts-with</name>
+        <arity>3</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>static-base-uri</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyURI?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string</name>
+        <arity>1</arity>
+        <arguments>$arg as item()?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string-join</name>
+        <arity>1</arity>
+        <arguments>$arg1 as xs:string*</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string-join</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string*, $arg2 as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string-length</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string-length</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:integer</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>string-to-codepoints</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:integer*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>subsequence</name>
+        <arity>2</arity>
+        <arguments>$sourceSeq as item()*, $startingLoc as xs:double</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>subsequence</name>
+        <arity>3</arity>
+        <arguments>$sourceSeq as item()*, $startingLoc as xs:double, $length as xs:double</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring</name>
+        <arity>2</arity>
+        <arguments>$sourceString as xs:string?, $start as xs:double</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring</name>
+        <arity>3</arity>
+        <arguments>$sourceString as xs:string?, $start as xs:double, $length as xs:double</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring-after</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring-after</name>
+        <arity>3</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring-before</name>
+        <arity>2</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>substring-before</name>
+        <arity>3</arity>
+        <arguments>$arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>sum</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:anyAtomicType*</arguments>
+        <returnType>xs:anyAtomicType</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>sum</name>
+        <arity>2</arity>
+        <arguments>$arg as xs:anyAtomicType*, $zero as xs:anyAtomicType?</arguments>
+        <returnType>xs:anyAtomicType?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>tail</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>timezone-from-date</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:date?</arguments>
+        <returnType>xs:dayTimeDuration?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>timezone-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:dayTimeDuration?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>timezone-from-time</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:time?</arguments>
+        <returnType>xs:dayTimeDuration?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>tokenize</name>
+        <arity>2</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string</arguments>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>tokenize</name>
+        <arity>3</arity>
+        <arguments>$input as xs:string?, $pattern as xs:string, $flags as xs:string</arguments>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>trace</name>
+        <arity>2</arity>
+        <arguments>$value as item()*, $label as xs:string</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>translate</name>
+        <arity>3</arity>
+        <arguments>$arg as xs:string?, $mapString as xs:string, $transString as xs:string</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>true</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unordered</name>
+        <arity>1</arity>
+        <arguments>$sourceSeq as item()*</arguments>
+        <returnType>item()*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text</name>
+        <arity>1</arity>
+        <arguments>$href as xs:string?</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text</name>
+        <arity>2</arity>
+        <arguments>$href as xs:string?, $encoding as xs:string</arguments>
+        <returnType>xs:string?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text-available</name>
+        <arity>1</arity>
+        <arguments>$href as xs:string?</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text-available</name>
+        <arity>2</arity>
+        <arguments>$href as xs:string?, $encoding as xs:string</arguments>
+        <returnType>xs:boolean</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text-lines</name>
+        <arity>1</arity>
+        <arguments>$href as xs:string?</arguments>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>unparsed-text-lines</name>
+        <arity>2</arity>
+        <arguments>$href as xs:string?, $encoding as xs:string</arguments>
+        <returnType>xs:string*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>upper-case</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:string</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>uri-collection</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:anyURI*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>uri-collection</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:string?</arguments>
+        <returnType>xs:anyURI*</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>year-from-date</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:date?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>year-from-dateTime</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:dateTime?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>years-from-duration</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:duration?</arguments>
+        <returnType>xs:integer?</returnType>
+    </function>
+    <function>
+        <prefix>fn</prefix>
+        <name>zero-or-one</name>
+        <arity>1</arity>
+        <arguments>$arg as item()*</arguments>
+        <returnType>item()?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>acos</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>asin</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>atan</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>atan2</name>
+        <arity>2</arity>
+        <arguments>$y as xs:double, $x as xs:double</arguments>
+        <returnType>xs:double</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>cos</name>
+        <arity>1</arity>
+        <arguments>$ as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>exp</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>exp10</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>log</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>log10</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>pi</name>
+        <arity>0</arity>
+        <arguments/>
+        <returnType>xs:double</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>pow</name>
+        <arity>2</arity>
+        <arguments>$x as xs:double?, $y as numeric</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>sin</name>
+        <arity>1</arity>
+        <arguments>$ as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>sqrt</name>
+        <arity>1</arity>
+        <arguments>$arg as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+    <function>
+        <prefix>math</prefix>
+        <name>tan</name>
+        <arity>1</arity>
+        <arguments>$ as xs:double?</arguments>
+        <returnType>xs:double?</returnType>
+    </function>
+</functions>

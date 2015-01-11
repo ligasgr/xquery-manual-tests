@@ -1,0 +1,1 @@
+typeswitch ($node) case $a as element() return $a default return $node

@@ -1,0 +1,1 @@
+some $searchString in ('a', 'b') satisfies contains('ag', $searchString)
